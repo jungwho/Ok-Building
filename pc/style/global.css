@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "pretendard";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+}
+
+html {
+  line-height: 1.2;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+* {
+  font-family: "pretendard";
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  animation: fading 0.5s;
+  transition: 0.25s;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.5;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+}
+
+button:hover {
+  opacity: 0.5;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+textarea {
+  font: inherit;
+  border: none;
+  outline: none;
+}
