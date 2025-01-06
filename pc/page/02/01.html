@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style/global.css" />
-    <link rel="stylesheet" href="../../style/header.css" />
+    <link rel="stylesheet" href="../../style/common/common.css" />
+    <link rel="stylesheet" href="../../style/01.css" />
 
     <title>매물정보</title>
   </head>
@@ -14,15 +15,70 @@
       <img src="../../image/02/header.png" style="width: 100%" />
 
       <!-- Header Import -->
-      <div class="header"></div>
+      <div class="header-container"></div>
       <script>
         fetch("../../page/common/header.html")
           .then((response) => response.text())
           .then((data) => {
-            document.querySelector(".header").innerHTML = data;
+            document.querySelector(".header-container").innerHTML = data;
             document.getElementById("nav02").style.borderBottom = "2px solid white";
           });
       </script>
     </div>
+
+    <!-- Tap -->
+    <div class="tap-container">
+      <a class="tap" id="target">추천매물</a>
+      <a class="tap" href="02.html">우수사례</a>
+    </div>
+
+    <!-- 추천매물 -->
+    <div class="main-container" style="background-color: #f1f1f5">
+      <p class="title" style="text-align: start">추천매물</p>
+      <div class="item-container" id="recommend-top"></div>
+    </div>
+
+    <script>
+      const topData = [
+        { src: "../../image/common/example.png" },
+        { src: "../../image/common/example.png" },
+        { src: "../../image/common/example.png" },
+        { src: "../../image/common/example.png" },
+      ];
+    </script>
+    <script src="../../script/01/topItem.js"></script>
+
+    <!-- 매물검색 -->
+    <div class="main-container">
+      <p class="title" style="text-align: start">매물검색</p>
+      <!-- Search Import -->
+      <div class="search-container"></div>
+      <script>
+        fetch("../../page/common/search.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector(".search-container").innerHTML = data;
+          });
+
+        const categoryData = { 서울: [], 경기: [], 인천: [], 그외지역: [], 매물금액: [], 매물용도: [], 검색어: [] };
+      </script>
+      <script src="../../script/common/search.js"></script>
+    </div>
+
+    <!-- 검색결과 -->
+    <div class="main-container">
+      <p class="title" style="text-align: start">매물결과</p>
+      <div class="item-container" id="recommend-bottom"></div>
+    </div>
+
+    <script>
+      const bottomData = [];
+    </script>
+    <script src="../../script/01/bottomItem.js"></script>
   </body>
+
+  <!-- Bottom -->
+  <div style="width: 100%">
+    <img src="../../image/common/bottom.png" style="width: 100%" />
+  </div>
 </html>

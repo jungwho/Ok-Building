@@ -1,0 +1,131 @@
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .search-box {
+    position: relative;
+    width: 25%;
+    height: 56px;
+    border: 2px solid #cacad7;
+
+    .search-input {
+      width: 100%;
+      height: 56px;
+      padding-left: 15px;
+    }
+
+    img {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+    }
+
+    img:hover {
+      cursor: pointer;
+      opacity: 0.5;
+      transition: 0.5s;
+    }
+  }
+
+  .search-box {
+    input:hover {
+      cursor: pointer;
+    }
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+}
+
+.category-container {
+  position: absolute;
+  top: calc(100% - 2px);
+  width: 100%;
+  display: none;
+
+  .category-top {
+    height: 400px;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+  }
+
+  .category-bottom {
+    height: 90px;
+    background-color: #f1f1f5;
+    border: 1.5px solid #999999;
+    border-top: none;
+    padding-left: 25%;
+    display: flex;
+
+    .tag-container {
+      width: 67%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px 0;
+
+      .tag {
+        display: flex;
+        align-items: center;
+        height: 25px;
+        padding: 0 3px;
+        margin-right: 3px;
+        border: 1px solid #e5e5ec;
+
+        p {
+          font-size: 11px;
+          margin-right: 3px;
+        }
+
+        button img {
+          width: 12px;
+        }
+      }
+    }
+
+    .button-container {
+      width: 33%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 2%;
+      justify-content: space-between;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 55px;
+      }
+
+      button:hover {
+        opacity: 0.5;
+      }
+
+      .btn01 {
+        width: 49%;
+        color: white;
+        font-size: calc(12px + 0.16vw);
+        background-color: #4b79ee;
+      }
+      .btn02 {
+        width: 49%;
+        background-color: black;
+        p {
+          color: white;
+          font-size: calc(12px + 0.16vw);
+        }
+
+        img {
+          width: 19px;
+        }
+      }
+    }
+  }
+}

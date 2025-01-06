@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../style/global.css" />
-    <link rel="stylesheet" href="../../style/header.css" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/common/common.css" />
+    <link rel="stylesheet" href="style/00.css" />
 
     <title>Main</title>
   </head>
@@ -14,16 +15,38 @@
       <img src="image/00/header.png" style="width: 100%" />
 
       <!-- Header Import -->
-      <div class="header"></div>
+      <div class="header-container"></div>
       <script>
-        fetch("../../page/common/header.html")
+        fetch("page/common/header.html")
           .then((response) => response.text())
           .then((data) => {
-            document.querySelector(".header").innerHTML = data;
+            document.querySelector(".header-container").innerHTML = data;
           });
       </script>
 
-      <div class="header-category"></div>
+      <!-- Search Import -->
+      <div class="search-container" style="position: absolute; bottom: 20%; width: 100%; padding: 0 13%"></div>
+      <script>
+        fetch("page/common/search.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector(".search-container").innerHTML = data;
+          });
+
+        const categoryData = { 서울: [], 경기: [], 인천: [], 그외지역: [], 매물금액: [], 매물용도: [], 검색어: [] };
+      </script>
+      <script src="script/common/search.js"></script>
+    </div>
+
+    <!-- 오케이부동산중개법인 -->
+    <div class="main-container">
+      <p class="title">오케이부동산중개법인</p>
+      <div class="img-nav">
+        <a href="page/01/01.html"><img src="image/00/nav01.png" /></a>
+        <a href="page/01/02.html"><img src="image/00/nav02.png" /></a>
+        <a href="page/01/03.html"><img src="image/00/nav03.png" /></a>
+        <a href="page/01/04.html"><img src="image/00/nav04.png" /></a>
+      </div>
     </div>
   </body>
 </html>

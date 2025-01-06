@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style/common/category.css" />
+  </head>
+  <body>
+    <div class="category-left">
+      <button class="category-nav" id="category-target">
+        <p>매물금액</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+    </div>
+    <div class="category-right">
+      <div class="reset-box">
+        <p>금액 초기화</p>
+        <img src="../../../image/common/reset.png" onclick="onClickReset('매물금액')" />
+      </div>
+      <div class="input-container">
+        <div class="input-box">
+          <input type="checkbox" id="30억미만" onchange="onChangeCheckBox('매물금액')" />
+          <p>30억미만</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="30억이상~70억미만" onchange="onChangeCheckBox('매물금액')" />
+          <p>30억이상~70억미만</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="70억이상~150억미만" onchange="onChangeCheckBox('매물금액')" />
+          <p>70억이상~150억미만</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="150억이상~300억미만" onchange="onChangeCheckBox('매물금액')" />
+          <p>150억이상~300억미만</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="300억이상~500억미만" onchange="onChangeCheckBox('매물금액')" />
+          <p>300억이상~500억미만</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="500억이상~1000억미만" onchange="onChangeCheckBox('매물금액')" />
+          <p>500억이상~1000억미만</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="1000억이상" onchange="onChangeCheckBox('매물금액')" />
+          <p>1000억이상</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.consult-form {
+  width: 100%;
+
+  .consult-box {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+    .consult-title {
+      width: 25%;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    input {
+      border: 1px solid #cacad7;
+      border-radius: 3px;
+      padding: 0 10px;
+      height: 40px;
+      font-size: 15px;
+    }
+  }
+}

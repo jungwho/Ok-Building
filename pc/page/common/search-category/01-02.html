@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style/common/category.css" />
+  </head>
+  <body>
+    <div class="category-left">
+      <button class="category-nav" onclick="fetchCategory('서울', '../../../page/common/search-category/01-01.html')">
+        <p>서울</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+      <button class="category-nav" id="category-target" onclick="fetchCategory('경기','../../../page/common/search-category/01-02.html')">
+        <p>경기</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+      <button class="category-nav" onclick="fetchCategory('인천','../../../page/common/search-category/01-03.html')">
+        <p>인천</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+      <button class="category-nav" onclick="fetchCategory('그외지역', '../../../page/common/search-category/01-04.html')">
+        <p>그외지역</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+    </div>
+    <div class="category-right">
+      <div class="reset-box">
+        <p>지역 초기화</p>
+        <img src="../../../image/common/reset.png" onclick="onClickReset('경기')" />
+      </div>
+      <div class="flex-container">
+        <div class="input-container">
+          <div class="input-box">
+            <input type="checkbox" id="전체" onchange="onChangeAll('경기')" />
+            <p>경기도 전체</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="수원시" onchange="onChangeCheckBox('경기')" />
+            <p>수원시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="용인시" onchange="onChangeCheckBox('경기')" />
+            <p>용인시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="고양시" onchange="onChangeCheckBox('경기')" />
+            <p>고양시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="성남시" onchange="onChangeCheckBox('경기')" />
+            <p>성남시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="화성시" onchange="onChangeCheckBox('경기')" />
+            <p>화성시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="남양주시" onchange="onChangeCheckBox('경기')" />
+            <p>남양주시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="안산시" onchange="onChangeCheckBox('경기')" />
+            <p>안산시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="부천시" onchange="onChangeCheckBox('경기')" />
+            <p>부천시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="안양시" onchange="onChangeCheckBox('경기')" />
+            <p>안양시</p>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <div class="input-box">
+            <input type="checkbox" id="평택시" onchange="onChangeCheckBox('경기')" />
+            <p>평택시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="의정부시" onchange="onChangeCheckBox('경기')" />
+            <p>의정부시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="광명시" onchange="onChangeCheckBox('경기')" />
+            <p>광명시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="시흥시" onchange="onChangeCheckBox('경기')" />
+            <p>시흥시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="김포시" onchange="onChangeCheckBox('경기')" />
+            <p>김포시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="광주시" onchange="onChangeCheckBox('경기')" />
+            <p>광주시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="군포시" onchange="onChangeCheckBox('경기')" />
+            <p>군포시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="오산시" onchange="onChangeCheckBox('경기')" />
+            <p>오산시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="이천시" onchange="onChangeCheckBox('경기')" />
+            <p>이천시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="여주시" onchange="onChangeCheckBox('경기')" />
+            <p>여주시</p>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <div class="input-box">
+            <input type="checkbox" id="하남시" onchange="onChangeCheckBox('경기')" />
+            <p>하남시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="양주시" onchange="onChangeCheckBox('경기')" />
+            <p>양주시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="포천시" onchange="onChangeCheckBox('경기')" />
+            <p>포천시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="동두천시" onchange="onChangeCheckBox('경기')" />
+            <p>동두천시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="안성시" onchange="onChangeCheckBox('경기')" />
+            <p>안성시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="의왕시" onchange="onChangeCheckBox('경기')" />
+            <p>의왕시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="과천시" onchange="onChangeCheckBox('경기')" />
+            <p>과천시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="양평군" onchange="onChangeCheckBox('경기')" />
+            <p>양평군</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="가평군" onchange="onChangeCheckBox('경기')" />
+            <p>가평군</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="연천군" onchange="onChangeCheckBox('경기')" />
+            <p>연천군</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

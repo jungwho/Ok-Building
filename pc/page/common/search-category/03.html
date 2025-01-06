@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style/common/category.css" />
+  </head>
+  <body>
+    <div class="category-left">
+      <button class="category-nav" id="category-target">
+        <p>매물용도</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+    </div>
+    <div class="category-right">
+      <div class="reset-box">
+        <p>용도 초기화</p>
+        <img src="../../../image/common/reset.png" onclick="onClickReset('매물용도')" />
+      </div>
+      <div class="input-container">
+        <div class="input-box">
+          <input type="checkbox" id="수익용" onchange="onChangeCheckBox('매물용도')" />
+          <p>수익용</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="사옥용" onchange="onChangeCheckBox('매물용도')" />
+          <p>사옥용</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="꼬마빌딩" onchange="onChangeCheckBox('매물용도')" />
+          <p>꼬마빌딩</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="신축부지" onchange="onChangeCheckBox('매물용도')" />
+          <p>신축부지</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="구분상가" onchange="onChangeCheckBox('매물용도')" />
+          <p>구분상가</p>
+        </div>
+        <div class="input-box">
+          <input type="checkbox" id="리모델링용" onchange="onChangeCheckBox('매물용도')" />
+          <p>리모델링용</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -34,6 +34,10 @@ body {
   color: black;
 }
 
+a {
+  all: unset;
+}
+
 a:hover {
   opacity: 0.5;
   transition: 0.25s;
@@ -48,6 +52,11 @@ button:hover {
   opacity: 0.5;
   transition: 0.25s;
   cursor: pointer;
+}
+
+button:active {
+  transform: none;
+  background: none;
 }
 
 ul,

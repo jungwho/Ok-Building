@@ -1,0 +1,43 @@
+/* Tap */
+.tap-container {
+  display: flex;
+  padding: 0 13%;
+  height: 64px;
+
+  .tap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-bottom: 2px solid #f1f1f5;
+  }
+
+  #target {
+    font-weight: 600;
+    border-color: black;
+  }
+
+  #target:hover {
+    opacity: 1;
+  }
+}
+
+/* main-container & title */
+.main-container {
+  padding: 80px 13%;
+
+  .title {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+/* page-container */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

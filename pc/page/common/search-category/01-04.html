@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../style/common/category.css" />
+  </head>
+  <body>
+    <div class="category-left">
+      <button class="category-nav" onclick="fetchCategory('서울울', '../../../page/common/search-category/01-01.html')">
+        <p>서울</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+      <button class="category-nav" onclick="fetchCategory('경기기', '../../../page/common/search-category/01-02.html')">
+        <p>경기</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+      <button class="category-nav" onclick="fetchCategory('인천', '../../../page/common/search-category/01-03.html')">
+        <p>인천</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+      <button class="category-nav" id="category-target" onclick="fetchCategory('그외지역','../../../page/common/search-category/01-04.html')">
+        <p>그외지역</p>
+        <img src="../../../image/common/left.png" />
+      </button>
+    </div>
+    <div class="category-right">
+      <div class="reset-box">
+        <p>지역 초기화</p>
+        <img src="../../../image/common/reset.png" onclick="onClickReset('그외지역')" />
+      </div>
+      <div class="flex-container">
+        <div class="input-container">
+          <div class="input-box">
+            <input type="checkbox" id="부산광역시" onchange="onChangeCheckBox('그외지역')" />
+            <p>부산광역시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="대구광역시" onchange="onChangeCheckBox('그외지역')" />
+            <p>대구광역시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="광주광역시" onchange="onChangeCheckBox('그외지역')" />
+            <p>광주광역시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="대전광역시" onchange="onChangeCheckBox('그외지역')" />
+            <p>대전광역시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="울산광역시" onchange="onChangeCheckBox('그외지역')" />
+            <p>울산광역시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="세종특별자치시" onchange="onChangeCheckBox('그외지역')" />
+            <p>세종특별자치시</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="강원도" onchange="onChangeCheckBox('그외지역')" />
+            <p>강원도</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="충청북도" onchange="onChangeCheckBox('그외지역')" />
+            <p>충청북도</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="충청남도" onchange="onChangeCheckBox('그외지역')" />
+            <p>충청남도</p>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <div class="input-box">
+            <input type="checkbox" id="전라북도" onchange="onChangeCheckBox('그외지역')" />
+            <p>전라북도</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="전라남도" onchange="onChangeCheckBox('그외지역')" />
+            <p>전라남도</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="경상북도" onchange="onChangeCheckBox('그외지역')" />
+            <p>경상북도</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="경상남도" onchange="onChangeCheckBox('그외지역')" />
+            <p>경상남도</p>
+          </div>
+          <div class="input-box">
+            <input type="checkbox" id="제주특별자치도" onchange="onChangeCheckBox('그외지역')" />
+            <p>제주특별자치도</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

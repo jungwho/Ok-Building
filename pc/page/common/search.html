@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/common/search.css" />
+  </head>
+  <body>
+    <div class="search">
+      <button class="search-box" id="category01" onclick="onClickSearch(event)">
+        <input class="search-input" placeholder="매물지역" readonly />
+        <img src="../../image/common/below.png" />
+      </button>
+      <button class="search-box" id="category02" onclick="onClickSearch(event)">
+        <input class="search-input" placeholder="매물금액" readonly />
+        <img src="../../image/common/below.png" />
+      </button>
+      <button class="search-box" id="category03" onclick="onClickSearch(event)">
+        <input class="search-input" placeholder="매물용도" readonly />
+        <img src="../../image/common/below.png" />
+      </button>
+      <button class="search-box" id="category04" onclick="onClickSearch(event)">
+        <input class="search-input" id="search-text" placeholder="검색어 입력" />
+        <img src="../../image/common/search.png" onclick="onClickSearchText()" />
+      </button>
+
+      <div class="category-container">
+        <div class="category-top"></div>
+        <div class="category-bottom">
+          <div class="tag-container"></div>
+          <div class="button-container">
+            <button class="btn01" onclick="onClickAllReset()">검색 초기화</button>
+            <button class="btn02" onclick="onClickSubmit()">
+              <p>검색하기</p>
+              <img src="../../image/common/search2.png" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
