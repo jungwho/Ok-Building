@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style/global.css" />
     <link rel="stylesheet" href="../../style/common/common.css" />
-    <link rel="stylesheet" href="../../style/01.css" />
+    <link rel="stylesheet" href="../../style/02.css" />
 
     <title>매물정보</title>
   </head>
@@ -35,18 +35,39 @@
     <!-- 추천매물 -->
     <div class="main-container" style="background-color: #f1f1f5">
       <p class="title" style="text-align: start">추천매물</p>
-      <div class="item-container" id="recommend-top"></div>
+      <div class="item-container" id="recommend-top">
+        <a class="item-box">
+          <img class="recommend-tag" src="../../image/02/recommend-tag.png" />
+          <img src="../../image/common/example.png" alt="item image" />
+          <div class="info-top" style="height: 25%">
+            <p class="info-title">유동인구 넘쳐나는 신촌 꼬마빌딩</p>
+            <div class="info-box" style="height: 55%">
+              <p class="info-text"><span>매매가</span> 240억원</p>
+              <p class="info-text"><span>수익률</span> 240억원</p>
+            </div>
+          </div>
+          <div class="info-box" style="height: 25%">
+            <p class="info-text"><span>지역</span> 240억원</p>
+            <p class="info-text"><span>대지면적</span> 240억원</p>
+            <p class="info-text"><span>연면적</span> 240억원</p>
+          </div>
+        </a>
+      </div>
     </div>
 
     <script>
-      const topData = [
-        { src: "../../image/common/example.png" },
-        { src: "../../image/common/example.png" },
-        { src: "../../image/common/example.png" },
-        { src: "../../image/common/example.png" },
-      ];
+      const topData = Array.from({ length: 4 }, (_, index) => ({
+        num: index + 1,
+        src: "../../image/common/example.png",
+        title: "유동인구 넘쳐나는 신촌 꼬마빌딩",
+        price: "240억원",
+        profit: "00%",
+        region: "서울 강동구 천호동",
+        area: "00m",
+        area2: "00m",
+      }));
     </script>
-    <script src="../../script/01/topItem.js"></script>
+    <script src="../../script/02/topItem.js"></script>
 
     <!-- 매물검색 -->
     <div class="main-container">
@@ -71,14 +92,38 @@
       <div class="item-container" id="recommend-bottom"></div>
     </div>
 
-    <script>
-      const bottomData = [];
-    </script>
-    <script src="../../script/01/bottomItem.js"></script>
-  </body>
+    <!-- Paging Container -->
+    <div class="page-container"></div>
 
-  <!-- Bottom -->
-  <div style="width: 100%">
-    <img src="../../image/common/bottom.png" style="width: 100%" />
-  </div>
+    <script>
+      const bottomData = Array.from({ length: 100 }, (_, index) => ({
+        num: index + 1,
+        src: "../../image/common/example.png",
+        title: "유동인구 넘쳐나는 신촌 꼬마빌딩",
+        price: "240억원",
+        profit: "00%",
+        region: "서울 강동구 천호동",
+        area: "00m",
+        area2: "00m",
+      }));
+    </script>
+    <script src="../../script/02/bottomItem.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sessionData = sessionStorage.getItem("category-data");
+
+        if (sessionData) {
+          const sessionCategoryData = JSON.parse(sessionData);
+          console.log(sessionCategoryData);
+
+          updatePageBtn(16);
+        }
+      });
+    </script>
+
+    <!-- Bottom -->
+    <div style="width: 100%">
+      <img src="../../image/common/bottom.png" style="width: 100%" />
+    </div>
+  </body>
 </html>

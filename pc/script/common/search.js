@@ -150,9 +150,10 @@ const onChangeCheckBox = (name) => {
 
 const onClickSearchText = () => {
   const text = document.getElementById("search-text").value;
-  categoryData["검색어"].push(text);
-
-  updateCategoryList();
+  if (text) {
+    categoryData["검색어"].push(text);
+    updateCategoryList();
+  }
 };
 
 const onClickAllReset = () => {
@@ -170,4 +171,15 @@ const onClickSubmit = () => {
   document.querySelectorAll(".search-box").forEach((item) => {
     item.style.border = "2px solid #cacad7";
   });
+
+  const isData = Object.values(categoryData).some((array) => array.length > 0);
+
+  if (isData) {
+    sessionStorage.setItem("category-data", JSON.stringify(categoryData));
+    if (window.location.pathname === "/index.html") window.location.href = "../../page/02/01.html#recommend-bottom";
+    else {
+      console.log(window.location.pathname);
+      window.location.reload();
+    }
+  }
 };

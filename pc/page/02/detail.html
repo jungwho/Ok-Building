@@ -21,7 +21,7 @@
           .then((response) => response.text())
           .then((data) => {
             document.querySelector(".header-container").innerHTML = data;
-            document.getElementById("nav01").style.borderBottom = "2px solid white";
+            document.getElementById("nav02").style.borderBottom = "2px solid white";
           });
       </script>
     </div>
@@ -29,32 +29,8 @@
     <!-- Tap -->
     <div class="tap-container">
       <a class="tap" href="01.html">추천매물</a>
-      <a class="tap" id="target">우수사례</a>
+      <a class="tap" href="02.html">우수사례</a>
     </div>
-
-    <!-- 우수사례 -->
-    <div class="main-container">
-      <p class="title" style="margin-bottom: 100px">우수사례</p>
-      <div class="item-container" id="best"></div>
-    </div>
-
-    <!-- page container -->
-    <div class="page-container"></div>
-
-    <script>
-      const bestData = Array.from({ length: 100 }, (_, index) => ({
-        num: index + 1,
-        src: "../../image/common/example.png",
-        title: "유동인구 넘쳐나는 신촌 꼬마빌딩",
-        price: "240억원",
-        region: "서울 강동구 천호동",
-        area: "00m",
-        area2: "00m",
-        floor: "B2/4F",
-        date: "2024년 8월",
-      }));
-    </script>
-    <script src="../../script/02/bestItem.js"></script>
 
     <!-- Bottom -->
     <div style="width: 100%">
