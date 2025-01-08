@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style/global.css" />
     <link rel="stylesheet" href="../../style/common/common.css" />
+    <link rel="stylesheet" href="../../style/03.css" />
 
     <title>미디어</title>
   </head>
@@ -30,6 +31,64 @@
       <a class="tap" id="target">보도자료</a>
       <a class="tap" href="02.html">오케이TV</a>
     </div>
+
+    <!-- 보도자료 -->
+    <div class="main-container">
+      <p class="title">보도자료</p>
+
+      <!-- search -->
+      <div class="board-search">
+        <div class="input-box" style="width: 160px; margin-right: 10px" onclick="onClickCategoryBox()">
+          <input placeholder="제목" class="category-input" readonly />
+          <img src="../../image/03/below.png" class="list-button" />
+          <div class="list-box">
+            <p id="title" onclick="onClickCategory(event)">제목</p>
+            <p id="content" onclick="onClickCategory(event)">내용</p>
+            <p id="title-content" onclick="onClickCategory(event)">제목+내용</p>
+            <p id="name" onclick="onClickCategory(event)">글쓴이</p>
+          </div>
+        </div>
+        <div class="input-box">
+          <input placeholder="검색어를 입력하세요" class="search-input" />
+          <img src="../../image/03/search.png" onclick="onClickSearch()" />
+        </div>
+      </div>
+
+      <!-- header -->
+      <div class="board-header">
+        <p style="width: 7%">번호</p>
+        <p style="width: 68%">제목</p>
+        <p style="width: 22%">이름</p>
+        <p style="width: 13%; border: none">날짜</p>
+      </div>
+
+      <!-- container -->
+      <div class="board-container"></div>
+    </div>
+
+    <!-- page container -->
+    <div class="page-container"></div>
+
+    <script>
+      // 임시데이터
+      const titles = ["2030 다이렉트 경품 이벤트", "2024 부동산 투자", "2023 경매 정보"];
+      const names = ["오케이부동산중개법인", "법률사무소", "헬로부동산"];
+      const boardData = Array.from({ length: 90 }, (_, index) => {
+        return {
+          num: index + 1,
+          title: titles[index % titles.length],
+          name: names[index % names.length],
+          date: "2025.12.25",
+          content: "투자 전략에 대해 다룹니다.",
+        };
+      });
+
+      const searchData = {
+        category: "title",
+        text: "",
+      };
+    </script>
+    <script src="../../script/03/boardItem.js"></script>
 
     <!-- Bottom -->
     <div style="width: 100%">

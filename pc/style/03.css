@@ -1,0 +1,120 @@
+.board-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 80px;
+
+  select {
+    border: 1px solid #e5e5ec;
+    height: 44px;
+    width: 160px;
+    color: #767676;
+    padding: 0 10px;
+
+    option {
+      border-radius: 0;
+    }
+  }
+
+  .input-box {
+    border: 1px solid #e5e5ec;
+    height: 44px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 0 30px 0 15px;
+      color: #767676;
+      font-size: 14px;
+    }
+
+    .category-input:hover {
+      cursor: pointer;
+    }
+
+    img {
+      position: absolute;
+      right: 10px;
+      width: 20px;
+    }
+
+    img:hover {
+      cursor: pointer;
+      opacity: 0.5;
+      transition: 0.5s;
+    }
+
+    .list-box {
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      top: 100%;
+      left: -1px;
+      background-color: white;
+      border: 1px solid #e5e5ec;
+      width: calc(100% + 2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+
+      p {
+        margin: 0;
+        padding: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      p:hover {
+        cursor: pointer;
+        background-color: #f0f0f0;
+        color: #4b79ee;
+      }
+    }
+  }
+}
+
+.board-header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  border-top: 2px solid #505050;
+  border-bottom: 1px solid #505050;
+  margin-top: 20px;
+  padding: 10px 0;
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #999999;
+    height: 100%;
+  }
+}
+
+.board-container {
+  .board-box {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid #f1f1f5;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 14px;
+    }
+  }
+
+  .board-box:hover {
+    opacity: 1;
+
+    p {
+      color: #4b79ee;
+    }
+  }
+}
