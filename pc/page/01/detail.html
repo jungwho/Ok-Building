@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/global.css" />
+    <link rel="stylesheet" href="../../style/common/common.css" />
+    <link rel="stylesheet" href="../../style/01.css" />
+
+    <title>회사소개</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div style="position: relative">
+      <img src="../../image/01/header.png" style="width: 100%" />
+
+      <!-- Header Import -->
+      <div class="header-container"></div>
+      <script>
+        fetch("../../page/common/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector(".header-container").innerHTML = data;
+            document.getElementById("nav01").style.borderBottom = "2px solid white";
+          });
+      </script>
+    </div>
+
+    <!-- Tap -->
+    <div class="tap-container">
+      <a class="tap" href="01.html">CEO인사말</a>
+      <a class="tap" id="target">빌딩전문가</a>
+      <a class="tap" href="03.html">오시는길</a>
+      <a class="tap" href="04.html">채용공고</a>
+    </div>
+
+    <!-- 빌딩전문가 -->
+    <div class="main-container">
+      <p class="title">빌딩전문가</p>
+    </div>
+
+    <div class="detail-container">
+      <div class="profile">
+        <img id="profile" />
+        <div>
+          <span></span>
+          <p id="name"></p>
+          <span id="position"></span>
+        </div>
+      </div>
+      <div class="info">
+        <p id="name2"><span>Consultant</span></p>
+        <p id="line"></p>
+        <div id="description"></div>
+        <p id="tel"></p>
+        <p id="mail"></p>
+      </div>
+    </div>
+
+    <script>
+      const queryString = window.location.search;
+      const params = new URLSearchParams(queryString);
+
+      const num = params.get("num");
+      const data = {
+        1: {
+          name: "엄 석",
+          position: "부장",
+          line: "단순 소개가 아닌 성공창업 하실수 있도록 최선의 노력을 다하겠습니다",
+          description:
+            "보통 자소서로 줄여 부른다. 내가 살아온 생애와 문제 의식, 가치관, 삶의 태도 등을 어필함으로써 해당 회사 또는 대학에서 요구하는 인재상을 얼마나 충족시킬 수 있는가를 구체적으로 보여줄 수 있는 가장 좋은 무기 중의 하나며 최근 들어 점점 그 중요성이 커지고 있다. 입학사정관제의 여파로 상위권 대학교 입시, 또는 특목고, 자사고, 특성화고 등등의 고입에서부터 자소서로 머리를 싸매는 것이 좋은 예. 군 간부에 지원할 경우 여기서 면접 질문이 나올 수도 있다.",
+          img: "../../image/01/profile.png",
+          tel: "010-9455-2245",
+          mail: "anbread1@gmail.com",
+        },
+      };
+
+      if (num && data[num]) {
+        const profileData = data[num];
+
+        // Update DOM elements with profile data
+        document.getElementById("profile").src = profileData.img;
+        document.getElementById("name").textContent = profileData.name;
+        document.getElementById("name2").innerHTML = `${profileData.name}<span>Consultant</span>`;
+        document.getElementById("position").textContent = profileData.position;
+        document.getElementById("line").textContent = profileData.line;
+        document.getElementById("description").textContent = profileData.description;
+        document.getElementById("tel").innerHTML = `T. ${profileData.tel}`;
+        document.getElementById("mail").innerHTML = `M. ${profileData.mail}`;
+      } else {
+        // Handle invalid or missing `id`
+        document.body.innerHTML = "<p>Invalid or missing profile ID.</p>";
+      }
+    </script>
+
+    <!-- Bottom -->
+    <div style="width: 100%">
+      <img src="../../image/common/bottom.png" style="width: 100%" />
+    </div>
+  </body>
+</html>

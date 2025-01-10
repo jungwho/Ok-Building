@@ -22,6 +22,7 @@
     color: #505050;
     font-size: 18px;
     margin-bottom: 4px;
+    line-height: 1.5;
   }
 
   .ceo-title {
@@ -44,13 +45,115 @@
   p {
     color: #767676;
     margin: 20px 0;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 .map-box2 {
   p {
     margin: 20px 0;
-    font-size: calc(10px + 0.3vw);
+    font-size: calc(12px + 0.3vw);
+  }
+}
+
+.consultant-container {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+
+  .consultant-box {
+    margin: 10px;
+
+    img {
+      width: 380px;
+    }
+  }
+
+  .consultant-name {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+
+    p {
+      font-size: 28px;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+
+    span {
+      letter-spacing: 3px;
+      background-color: #f1f1f5;
+      padding: 4px 8px;
+    }
+  }
+
+  .consultant-line {
+    font-size: 14px;
+    color: #505050;
+  }
+}
+
+.detail-container {
+  background-color: #f1f1f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 720px;
+
+  .profile {
+    margin-right: 80px;
+
+    img {
+      width: 350px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+
+      #name {
+        margin: 0 20px;
+        font-size: 26px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .info {
+    width: 45%;
+
+    #name2 {
+      font-size: 28px;
+      font-weight: 600;
+
+      span {
+        margin-left: 20px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    #line {
+      color: #505050;
+      font-size: calc(16px + 0.5vw);
+      margin: 40px 0;
+    }
+
+    #description {
+      color: #505050;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 80px;
+      text-align: justify;
+    }
+
+    #tel,
+    #mail {
+      color: #505050;
+      font-size: 16px;
+      margin: 5px 0;
+    }
   }
 }
